@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>items</key>
+    <array>
+        <dict>
+            <key>cell</key>    <string>PSGroupCell</string>
+            <key>label</key>   <string>Bong bóng tốc độ</string>
+        </dict>
+        <dict>
+            <key>cell</key>         <string>PSSwitchCell</string>
+            <key>key</key>          <string>hud</string>
+            <key>label</key>        <string>Bật bong bóng tốc độ</string>
+            <key>default</key>      <true/>
+            <key>defaults</key>     <string>com.splitplay.preferences</string>
+            <key>PostNotification</key><string>com.splitplay.preferences.changed</string>
+        </dict>
+        <dict>
+            <key>cell</key>         <string>PSLinkListCell</string>
+            <key>key</key>          <string>hudSource</string>
+            <key>label</key>        <string>Nguồn dữ liệu</string>
+            <key>default</key>      <integer>0</integer>
+            <key>validValues</key>
+            <array>
+                <integer>0</integer>
+                <integer>1</integer>
+                <integer>2</integer>
+                <integer>3</integer>
+            </array>
+            <key>validTitles</key>
+            <array>
+                <string>GPS thiết bị (Mặc định)</string>
+                <string>VietMap Live</string>
+                <string>Waze</string>
+                <string>GOFA</string>
+            </array>
+            <key>defaults</key>     <string>com.splitplay.preferences</string>
+            <key>PostNotification</key><string>com.splitplay.preferences.changed</string>
+        </dict>
+        <dict>
+            <key>cell</key>    <string>PSGroupCell</string>
+            <key>label</key>   <string>Cảnh báo</string>
+        </dict>
+        <dict>
+            <key>cell</key>         <string>PSSwitchCell</string>
+            <key>key</key>          <string>hudOverTone</string>
+            <key>label</key>        <string>Âm cảnh báo vượt tốc độ</string>
+            <key>default</key>      <true/>
+            <key>defaults</key>     <string>com.splitplay.preferences</string>
+            <key>PostNotification</key><string>com.splitplay.preferences.changed</string>
+        </dict>
+    </array>
+    <key>title</key>    <string>Bong bóng tốc độ</string>
+</dict>
+</plist>

@@ -1,0 +1,17 @@
+Origin: SidePlay
+Label: SidePlay
+Suite: stable
+Version: 1.0
+Codename: ios
+Date: Wed, 25 Nov 2026 15:19:14 UTC
+Architectures: iphoneos-arm iphoneos-arm64 iphoneos-arm64e
+Components: main
+Description: Nguồn tweak SidePlay cho CarPlay
+MD5Sum:
+ 240173be2ffa86bf18a51a009b597d08 4873 Packages
+ 8c65a4594a10376335d2f0302442784b 1068 Packages.gz
+ 1f433ee3ad07fe14a5013f60aadfb060 1318 Packages.bz2
+SHA256:
+ 922929991b510fcdc7e2124a93f3322f32b19921c56042dc2ac112eeb22d49fb 4873 Packages
+ 086e6b443f6732d1594afce96bf3474c0b6bc2733e3ca1b6f417f87d0548df6a 1068 Packages.gz
+ fb99d93f29f861684550539a41d145a41d25efc8f3270abd8bdf4703343cbe75 1318 Packages.bz2

@@ -1,0 +1,10 @@
+Package: com.splitplay.carplay
+Name: SplitPlay2
+Version: 2.1.4
+Architecture: iphoneos-arm64
+Description: Hiển thị 2 ứng dụng song song trên màn hình CarPlay (kiến trúc carplay-cast)
+Maintainer: SplitPlay
+Author: SplitPlay
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000) | ellekit, firmware (>= 14.0), preferenceloader
+Conflicts: com.cortex.carplayenable, com.pavunato.carsurf, com.bmt.dash

@@ -1,0 +1,125 @@
+Package: com.sideplay2
+Name: SidePlay2
+Description: Tweak vui vẻ dành cho CarPlay
+Depends: firmware (>= 15.0), mobilesubstrate, preferenceloader
+Conflicts: com.sideplay2.beta, com.sideplay, com.sideplay.beta, com.cortex.carplayenable, com.pavunato.carsurf, com.bmt.dash, com.chou.googlemaps.vietmap
+Replaces: com.sideplay2.beta
+Maintainer: SidePlay
+Author: SidePlay
+Section: Tweaks
+Icon: https://sideplay.pages.dev/sideplay2.png
+Architecture: iphoneos-arm
+Version: 2.1.4
+Installed-Size: 12172
+Tag: cydia::commercial
+SileoDepiction: https://sideplay.pages.dev/api/sp2/depiction
+Filename: debs2/com.sideplay2_2.1.4_iphoneos-arm.deb
+Size: 3073500
+MD5sum: 486c8bb3a8d168135e9a2614756e73a1
+SHA1: 98ca6322c44afc8d757009bbf22c20f58ef4baed
+SHA256: 6bc60c63383892e73fd61428fa69b578024bf14175a8b254ef903ddac9318bcb
+
+Package: com.sideplay2
+Name: SidePlay2
+Description: Tweak vui vẻ dành cho CarPlay
+Depends: firmware (>= 15.0), mobilesubstrate, preferenceloader
+Conflicts: com.sideplay2.beta, com.sideplay, com.sideplay.beta, com.cortex.carplayenable, com.pavunato.carsurf, com.bmt.dash, com.chou.googlemaps.vietmap
+Replaces: com.sideplay2.beta
+Maintainer: SidePlay
+Author: SidePlay
+Section: Tweaks
+Icon: https://sideplay.pages.dev/sideplay2.png
+Architecture: iphoneos-arm64
+Version: 2.1.4
+Installed-Size: 12172
+Tag: cydia::commercial
+SileoDepiction: https://sideplay.pages.dev/api/sp2/depiction
+Filename: debs2/com.sideplay2_2.1.4_iphoneos-arm64.deb
+Size: 3075564
+MD5sum: f6aa8cb8d010ddbf57ada5c3b8983d69
+SHA1: 9e9f97c1105d13cf0a403fad8f5f4d0814a21469
+SHA256: 8da65ad8adaf6b46b2f546641ea49c2ec90d0977d483e6a8f7f56a59c5eb15ca
+
+Package: com.sideplay2
+Name: SidePlay2
+Description: Tweak vui vẻ dành cho CarPlay
+Depends: firmware (>= 15.0), mobilesubstrate, preferenceloader
+Conflicts: com.sideplay2.beta, com.sideplay, com.sideplay.beta, com.cortex.carplayenable, com.pavunato.carsurf, com.bmt.dash, com.chou.googlemaps.vietmap
+Replaces: com.sideplay2.beta
+Maintainer: SidePlay
+Author: SidePlay
+Section: Tweaks
+Icon: https://sideplay.pages.dev/sideplay2.png
+Architecture: iphoneos-arm64e
+Version: 2.1.4
+Installed-Size: 12172
+Tag: cydia::commercial
+SileoDepiction: https://sideplay.pages.dev/api/sp2/depiction
+Filename: debs2/com.sideplay2_2.1.4_iphoneos-arm64e.deb
+Size: 3072668
+MD5sum: 810b231deafb2c8b8d5f773b816b14ec
+SHA1: 42a11b8a63d38473ee8e0d580bf3eaad419e1c5e
+SHA256: fa85868e8da8cf00c48c4a7b78d273c0100b509595ad5a3e416d880b3924dfb7
+
+Package: com.sideplay2
+Name: SidePlay2
+Description: Tweak vui vẻ dành cho CarPlay
+Depends: firmware (>= 15.0), mobilesubstrate, preferenceloader
+Conflicts: com.sideplay2.beta, com.sideplay, com.sideplay.beta, com.cortex.carplayenable, com.pavunato.carsurf, com.bmt.dash, com.chou.googlemaps.vietmap
+Replaces: com.sideplay2.beta
+Maintainer: SidePlay
+Author: SidePlay
+Section: Tweaks
+Icon: https://sideplay.pages.dev/sideplay2.png
+Architecture: iphoneos-arm
+Version: 2.1.3
+Installed-Size: 11668
+Tag: cydia::commercial
+SileoDepiction: https://sideplay.pages.dev/api/sp2/depiction
+Filename: debs2/com.sideplay2_2.1.3_iphoneos-arm.deb
+Size: 2801824
+MD5sum: 246fc45630bc33ceb5fe274aee9d84eb
+SHA1: 634f4faf953f7db00fc3818b79b21593fc126157
+SHA256: 6a8ecffd250a8e9ff8d4aa2f9f7f3f24ebd94c2394afd99df76cf609b9580f59
+
+Package: com.sideplay2
+Name: SidePlay2
+Description: Tweak vui vẻ dành cho CarPlay
+Depends: firmware (>= 15.0), mobilesubstrate, preferenceloader
+Conflicts: com.sideplay2.beta, com.sideplay, com.sideplay.beta, com.cortex.carplayenable, com.pavunato.carsurf, com.bmt.dash, com.chou.googlemaps.vietmap
+Replaces: com.sideplay2.beta
+Maintainer: SidePlay
+Author: SidePlay
+Section: Tweaks
+Icon: https://sideplay.pages.dev/sideplay2.png
+Architecture: iphoneos-arm64
+Version: 2.1.3
+Installed-Size: 11668
+Tag: cydia::commercial
+SileoDepiction: https://sideplay.pages.dev/api/sp2/depiction
+Filename: debs2/com.sideplay2_2.1.3_iphoneos-arm64.deb
+Size: 2806488
+MD5sum: 6bbb3f39b5d11de9008c7129d80d3afc
+SHA1: ada16c849b6085c7ce6b5bb984a08b666f2694bb
+SHA256: 8c0b4a475ea896b8f12255c97457ce4d0a4ea93ada4789f35f39cdc09f8999e9
+
+Package: com.sideplay2
+Name: SidePlay2
+Description: Tweak vui vẻ dành cho CarPlay
+Depends: firmware (>= 15.0), mobilesubstrate, preferenceloader
+Conflicts: com.sideplay2.beta, com.sideplay, com.sideplay.beta, com.cortex.carplayenable, com.pavunato.carsurf, com.bmt.dash, com.chou.googlemaps.vietmap
+Replaces: com.sideplay2.beta
+Maintainer: SidePlay
+Author: SidePlay
+Section: Tweaks
+Icon: https://sideplay.pages.dev/sideplay2.png
+Architecture: iphoneos-arm64e
+Version: 2.1.3
+Installed-Size: 11668
+Tag: cydia::commercial
+SileoDepiction: https://sideplay.pages.dev/api/sp2/depiction
+Filename: debs2/com.sideplay2_2.1.3_iphoneos-arm64e.deb
+Size: 2803400
+MD5sum: 7b1e631d00b2638502f0bfb05392345a
+SHA1: b309cd60f29cba85e6728d04d856d3a6878bfd12
+SHA256: 9686ec751a40f1b43419ddb9c567de88ab8055e3ef18496c250c9ac41c911c44

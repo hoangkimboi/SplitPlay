@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>items</key>
+    <array>
+        <dict>
+            <key>cell</key>    <string>PSGroupCell</string>
+            <key>label</key>   <string>Cài đặt SplitPlay2</string>
+            <key>footerText</key><string>Hiển thị 2 ứng dụng song song trên màn hình CarPlay.</string>
+        </dict>
+        <dict>
+            <key>cell</key>     <string>PSLinkCell</string>
+            <key>label</key>    <string>Trên xe (Bố cục &amp; Chia đôi)</string>
+            <key>detail</key>   <string>SP2DriveListController</string>
+        </dict>
+        <dict>
+            <key>cell</key>     <string>PSLinkCell</string>
+            <key>label</key>    <string>Màn hình trên xe &amp; Dock</string>
+            <key>detail</key>   <string>SP2CarListController</string>
+        </dict>
+        <dict>
+            <key>cell</key>     <string>PSLinkCell</string>
+            <key>label</key>    <string>Bong bóng tốc độ HUD</string>
+            <key>detail</key>   <string>SP2SpeedListController</string>
+        </dict>
+        <dict>
+            <key>cell</key>    <string>PSGroupCell</string>
+            <key>label</key>   <string>Hệ thống</string>
+        </dict>
+        <dict>
+            <key>cell</key>     <string>PSButtonCell</string>
+            <key>label</key>    <string>Khởi động lại SpringBoard (Respring)</string>
+            <key>action</key>   <string>respring</string>
+        </dict>
+    </array>
+    <key>title</key>    <string>SplitPlay2</string>
+</dict>
+</plist>

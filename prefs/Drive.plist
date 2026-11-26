@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>items</key>
+    <array>
+        <dict>
+            <key>cell</key>    <string>PSGroupCell</string>
+            <key>label</key>   <string>Tự động</string>
+        </dict>
+        <dict>
+            <key>cell</key>         <string>PSSwitchCell</string>
+            <key>key</key>          <string>autoOpen</string>
+            <key>label</key>        <string>Mở khi kết nối CarPlay</string>
+            <key>default</key>      <true/>
+            <key>defaults</key>     <string>com.splitplay.preferences</string>
+            <key>PostNotification</key><string>com.splitplay.preferences.changed</string>
+        </dict>
+        <dict>
+            <key>cell</key>         <string>PSSwitchCell</string>
+            <key>key</key>          <string>restoreLast</string>
+            <key>label</key>        <string>Mở lại bố cục lần cuối</string>
+            <key>default</key>      <true/>
+            <key>defaults</key>     <string>com.splitplay.preferences</string>
+            <key>PostNotification</key><string>com.splitplay.preferences.changed</string>
+        </dict>
+        <dict>
+            <key>cell</key>    <string>PSGroupCell</string>
+            <key>label</key>   <string>Ứng dụng mặc định</string>
+        </dict>
+        <dict>
+            <key>cell</key>         <string>PSEditTextCell</string>
+            <key>key</key>          <string>leftApp</string>
+            <key>label</key>        <string>App Trái</string>
+            <key>default</key>      <string>com.google.Maps</string>
+            <key>defaults</key>     <string>com.splitplay.preferences</string>
+            <key>PostNotification</key><string>com.splitplay.preferences.changed</string>
+        </dict>
+        <dict>
+            <key>cell</key>         <string>PSEditTextCell</string>
+            <key>key</key>          <string>rightApp</string>
+            <key>label</key>        <string>App Phải</string>
+            <key>default</key>      <string>com.google.ios.youtube</string>
+            <key>defaults</key>     <string>com.splitplay.preferences</string>
+            <key>PostNotification</key><string>com.splitplay.preferences.changed</string>
+        </dict>
+        <dict>
+            <key>cell</key>    <string>PSGroupCell</string>
+            <key>label</key>   <string>Tiết kiệm năng lượng</string>
+        </dict>
+        <dict>
+            <key>cell</key>         <string>PSSwitchCell</string>
+            <key>key</key>          <string>phoneBlank</string>
+            <key>label</key>        <string>Tự làm tối màn hình iPhone</string>
+            <key>default</key>      <false/>
+            <key>defaults</key>     <string>com.splitplay.preferences</string>
+            <key>PostNotification</key><string>com.splitplay.preferences.changed</string>
+        </dict>
+    </array>
+    <key>title</key>    <string>Trên xe</string>
+</dict>
+</plist>

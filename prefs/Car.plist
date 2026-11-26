@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>items</key>
+    <array>
+        <dict>
+            <key>cell</key>    <string>PSGroupCell</string>
+            <key>label</key>   <string>Dock CarPlay</string>
+            <key>footerText</key><string>Ẩn thanh dock bên cạnh để tối đa diện tích màn hình hiển thị 2 ứng dụng.</string>
+        </dict>
+        <dict>
+            <key>cell</key>         <string>PSSwitchCell</string>
+            <key>key</key>          <string>carDock</string>
+            <key>label</key>        <string>Ẩn dock CarPlay (Toàn màn hình)</string>
+            <key>default</key>      <false/>
+            <key>defaults</key>     <string>com.splitplay.preferences</string>
+            <key>PostNotification</key><string>com.splitplay.preferences.changed</string>
+        </dict>
+        <dict>
+            <key>cell</key>    <string>PSGroupCell</string>
+            <key>label</key>   <string>Thu phóng (Zoom)</string>
+        </dict>
+        <dict>
+            <key>cell</key>         <string>PSSliderCell</string>
+            <key>key</key>          <string>carZoom</string>
+            <key>default</key>      <integer>100</integer>
+            <key>min</key>          <integer>70</integer>
+            <key>max</key>          <integer>120</integer>
+            <key>showValue</key>    <true/>
+            <key>defaults</key>     <string>com.splitplay.preferences</string>
+            <key>PostNotification</key><string>com.splitplay.preferences.changed</string>
+        </dict>
+    </array>
+    <key>title</key>    <string>Màn hình trên xe</string>
+</dict>
+</plist>
