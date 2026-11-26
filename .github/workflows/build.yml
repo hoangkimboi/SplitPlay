@@ -23,7 +23,7 @@ jobs:
       - name: Install System Dependencies
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq build-essential fakeroot git libtinfo5 libxml2 libxml2-dev zlib1g-dev clang
+          sudo apt-get install -y -qq build-essential fakeroot rsync curl perl git libxml2 libxml2-dev zlib1g-dev
 
       - name: Install Theos
         run: |
@@ -33,10 +33,8 @@ jobs:
 
       - name: Setup Linux iOS Toolchain & SDK
         run: |
-          mkdir -p ~/theos/toolchain/linux/iphone
-          curl -LO https://github.com/theos/toolchain/releases/download/v1.0.1/linux-arm64-toolchain.tar.xz
-          tar -xf linux-arm64-toolchain.tar.xz -C ~/theos/toolchain/linux/iphone
-          rm -f linux-arm64-toolchain.tar.xz
+          mkdir -p ~/theos/toolchain
+          curl -sL https://github.com/L1ghtmann/llvm-project/releases/latest/download/iOSToolchain-x86_64.tar.xz | tar -xJvf - -C ~/theos/toolchain/
 
           mkdir -p ~/theos/sdks
           curl -LO https://github.com/theos/sdks/releases/download/1700/iPhoneOS16.5.sdk.tar.xz
@@ -59,5 +57,6 @@ jobs:
         with:
           name: SplitPlay2-${{ matrix.scheme }}-deb
           path: packages/*.deb
+
 
 
