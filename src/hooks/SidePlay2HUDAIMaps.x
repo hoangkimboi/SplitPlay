@@ -1,4 +1,3 @@
-// SidePlay2HUDAIMaps.x - AI Maps HUD Adapter (100% Safe, Sandbox Only)
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
@@ -41,10 +40,6 @@ static void post_alert(int alertCode) {
     notify_set_state(g_alert_token, (uint64_t)alertCode);
     notify_post(HUD_ALERT_NOTIFICATION);
 }
-
-// ─────────────────────────────────────────────
-// MARK: - 1. GPS Speed & Background Location
-// ─────────────────────────────────────────────
 
 static void (*orig_didUpdateLocations)(id, SEL, CLLocationManager *, NSArray<CLLocation *> *) = NULL;
 
@@ -95,10 +90,13 @@ static void safe_didUpdateLocations(id self, SEL _cmd, CLLocationManager *manage
         [self setPausesLocationUpdatesAutomatically:NO];
     } @catch (NSException *e) {}
     %orig;
+}
 
-// ─────────────────────────────────────────────
-// MARK: - 2. AI Maps Voice Announcements Parser
-// ─────────────────────────────────────────────
+- (void)setAllowsBackgroundLocationUpdates:(BOOL)allow {
+    %orig(YES);
+}
+
+%end
 
 %hook AVSpeechSynthesizer
 
@@ -131,10 +129,6 @@ static void safe_didUpdateLocations(id self, SEL _cmd, CLLocationManager *manage
 
 %end
 
-// ─────────────────────────────────────────────
-// MARK: - 3. AI Maps Speed Limit Badge Parser
-// ─────────────────────────────────────────────
-
 %hook UILabel
 
 - (void)setText:(NSString *)text {
@@ -151,22 +145,12 @@ static void safe_didUpdateLocations(id self, SEL _cmd, CLLocationManager *manage
 
 %end
 
-// ─────────────────────────────────────────────
-// MARK: - Constructor
-// ─────────────────────────────────────────────
 %ctor {
     @autoreleasepool {
         NSString *bundleID = [[NSBundle mainBundle] bundleIdentifier];
         if ([bundleID isEqualToString:@"vn.aimap.ios"]) {
             NSLog(@"[SidePlay2-AIMaps] Injected into AI Maps (vn.aimap.ios)!");
+            %init;
         }
     }
 }
-
-}
-
-- (void)setAllowsBackgroundLocationUpdates:(BOOL)allow {
-    %orig(YES);
-}
-
-%end
