@@ -101,12 +101,13 @@
 
 - (void)setupPaneViews {
     _tabBar = [[SP2Tab alloc] initWithFrame:CGRectZero];
-    __weak typeof(self) weakSelf = self;
+    __weak __typeof__(self) weakSelf = self;
     _tabBar.onTabTapped   = ^{ [weakSelf.delegate paneWantsPicker:weakSelf]; };
     _tabBar.onSwapTapped  = ^{ [weakSelf.delegate paneWantsSwap:weakSelf]; };
     _tabBar.onZoomTapped  = ^{ [weakSelf.delegate paneWantsZoom:weakSelf]; };
     _tabBar.onCloseTapped = ^{ [weakSelf closeApp]; };
     [self addSubview:_tabBar];
+
 
     _sceneContainer = [[UIView alloc] initWithFrame:CGRectZero];
     _sceneContainer.backgroundColor = [UIColor blackColor];

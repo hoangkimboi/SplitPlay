@@ -28,13 +28,14 @@
     [self addSubview:self.rightPane];
 
     self.divider = [[SP2Dividers alloc] initWithFrame:CGRectZero];
-    __weak typeof(self) weakSelf = self;
+    __weak __typeof__(self) weakSelf = self;
     self.divider.onPanChanged = ^(CGFloat deltaX) {
         [weakSelf handleDividerDragged:deltaX];
     };
     self.divider.onDoubleTapped = ^{
         [weakSelf swapPanes];
     };
+
     [self addSubview:self.divider];
 
     [self relayoutPanesAnimated:NO];
@@ -135,13 +136,14 @@
 - (void)paneWantsPicker:(SP2Pane *)pane {
     if (!self.appPicker) {
         self.appPicker = [[SP2Picker alloc] initWithFrame:self.bounds];
-        __weak typeof(self) weakSelf = self;
+        __weak __typeof__(self) weakSelf = self;
         self.appPicker.onAppPicked = ^(NSString *bid, NSInteger targetSlot) {
             [weakSelf hostApp:bid inSlot:targetSlot];
             [weakSelf.appPicker dismiss];
         };
         [self addSubview:self.appPicker];
     }
+
     [self.appPicker showForSlot:pane.slot inView:self];
 }
 
