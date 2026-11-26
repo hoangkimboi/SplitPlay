@@ -20,11 +20,6 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Install System Dependencies
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq build-essential fakeroot rsync curl perl git libxml2 libxml2-dev zlib1g-dev
-
       - name: Install Theos
         run: |
           git clone --recursive https://github.com/theos/theos.git ~/theos
@@ -57,6 +52,7 @@ jobs:
         with:
           name: SplitPlay2-${{ matrix.scheme }}-deb
           path: packages/*.deb
+
 
 
 
