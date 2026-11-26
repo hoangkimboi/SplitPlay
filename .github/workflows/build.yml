@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-14
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         scheme: [rootless, rootful]
@@ -20,22 +20,33 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq build-essential fakeroot git libtinfo5 libxml2 libxml2-dev zlib1g-dev clang
+
       - name: Install Theos
         run: |
-          bash -c "$(curl -fsSL https://raw.githubusercontent.com/theos/theos/master/bin/install-theos)"
-          echo "THEOS=~/theos" >> $GITHUB_ENV
+          git clone --recursive https://github.com/theos/theos.git ~/theos
+          echo "THEOS=$HOME/theos" >> $GITHUB_ENV
           echo "$HOME/theos/bin" >> $GITHUB_PATH
 
-      - name: Download iOS 16.5 SDK
+      - name: Setup Linux iOS Toolchain & SDK
         run: |
-          cd ~/theos/sdks
+          mkdir -p ~/theos/toolchain/linux/iphone
+          curl -LO https://github.com/theos/toolchain/releases/download/v1.0.1/linux-arm64-toolchain.tar.xz
+          tar -xf linux-arm64-toolchain.tar.xz -C ~/theos/toolchain/linux/iphone
+          rm -f linux-arm64-toolchain.tar.xz
+
+          mkdir -p ~/theos/sdks
           curl -LO https://github.com/theos/sdks/releases/download/1700/iPhoneOS16.5.sdk.tar.xz
-          tar -xf iPhoneOS16.5.sdk.tar.xz
-          rm iPhoneOS16.5.sdk.tar.xz
+          tar -xf iPhoneOS16.5.sdk.tar.xz -C ~/theos/sdks
+          rm -f iPhoneOS16.5.sdk.tar.xz
 
       - name: Build Tweak (.deb)
         run: |
-          export THEOS=~/theos
+          export THEOS=$HOME/theos
+          export PATH=$THEOS/bin:$PATH
           make clean
           if [ "${{ matrix.scheme }}" = "rootless" ]; then
             make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
@@ -48,4 +59,5 @@ jobs:
         with:
           name: SplitPlay2-${{ matrix.scheme }}-deb
           path: packages/*.deb
+
 
