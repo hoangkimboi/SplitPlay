@@ -40,6 +40,7 @@ jobs:
 
       - name: Build Tweak (.deb)
         run: |
+          set -o pipefail
           export THEOS=$HOME/theos
           export PATH=$THEOS/bin:$PATH
           make clean
@@ -48,9 +49,10 @@ jobs:
           else
             make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME= 2>&1 | tee build.log
           fi
+          ls -la packages/ || true
 
-      - name: Upload Build Log on Failure
-        if: failure()
+      - name: Upload Build Log
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: build-log-${{ matrix.scheme }}
@@ -62,6 +64,7 @@ jobs:
         with:
           name: SplitPlay2-${{ matrix.scheme }}-deb
           path: packages/*.deb
+
 
 
 
