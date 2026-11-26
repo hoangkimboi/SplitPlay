@@ -1,6 +1,9 @@
 TARGET := iphone:clang:16.5:14.0
 ARCHS = arm64 arm64e
 
+# Default to rootless for iOS 15+ (Dopamine, Palera1n rootless)
+THEOS_PACKAGE_SCHEME ?= rootless
+
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = SplitPlay2
@@ -23,7 +26,7 @@ SplitPlay2_LIBRARIES = substrate
 # Preferences Bundle
 BUNDLE_NAME = SplitPlay2Prefs
 SplitPlay2Prefs_FILES = prefs/SplitPlayPrefsListController.mm
-SplitPlay2Prefs_INSTALL_PATH = /var/jb/Library/PreferenceBundles
+SplitPlay2Prefs_INSTALL_PATH = /Library/PreferenceBundles
 SplitPlay2Prefs_FRAMEWORKS = UIKit
 SplitPlay2Prefs_PRIVATE_FRAMEWORKS = Preferences
 SplitPlay2Prefs_CFLAGS = -fobjc-arc
@@ -33,3 +36,4 @@ include $(THEOS_MAKE_PATH)/bundle.mk
 
 after-install::
 	install.exec "killall -9 SpringBoard"
+

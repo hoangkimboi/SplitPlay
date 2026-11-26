@@ -10,6 +10,9 @@ on:
 jobs:
   build:
     runs-on: macos-14
+    strategy:
+      matrix:
+        scheme: [rootless, rootful]
 
     steps:
       - name: Checkout repository
@@ -23,7 +26,7 @@ jobs:
           echo "THEOS=~/theos" >> $GITHUB_ENV
           echo "$HOME/theos/bin" >> $GITHUB_PATH
 
-      - name: Download iOS SDK
+      - name: Download iOS 16.5 SDK
         run: |
           cd ~/theos/sdks
           curl -LO https://github.com/theos/sdks/releases/download/1700/iPhoneOS16.5.sdk.tar.xz
@@ -34,10 +37,15 @@ jobs:
         run: |
           export THEOS=~/theos
           make clean
-          make package FINALPACKAGE=1
+          if [ "${{ matrix.scheme }}" = "rootless" ]; then
+            make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+          else
+            make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=
+          fi
 
       - name: Upload .deb Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: SplitPlay2-deb
+          name: SplitPlay2-${{ matrix.scheme }}-deb
           path: packages/*.deb
+
