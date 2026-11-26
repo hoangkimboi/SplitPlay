@@ -47,25 +47,27 @@ jobs:
           export PATH=$THEOS/bin:$PATH
           make clean
           if [ "${{ matrix.scheme }}" = "rootless" ]; then
-            make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless > build.log 2>&1 || true
+            make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+            mkdir -p dist
+            cp packages/*.deb "dist/SidePlay2_AIMaps_Lifetime_rootless.deb"
           else
-            make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME= > build.log 2>&1 || true
+            make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=
+            mkdir -p dist
+            cp packages/*.deb "dist/SidePlay2_AIMaps_Lifetime_rootful.deb"
           fi
           echo "=== BUILD LOG ==="
-          cat build.log | tail -n 80
+          ls -la dist/
 
       - name: Commit Output to Repo
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          mkdir -p dist
-          cp build.log "dist/build-${{ matrix.scheme }}.log" || true
-          cp packages/*.deb "dist/" 2>/dev/null || true
           git add dist/
-          git commit -m "Auto: build artifacts and log for ${{ matrix.scheme }}" || true
+          git commit -m "Auto: build artifacts for ${{ matrix.scheme }}" || true
           git pull --rebase origin main || true
           git push origin main || true
+
 
       - name: Upload .deb Artifact
         uses: actions/upload-artifact@v4
