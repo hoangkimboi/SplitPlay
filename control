@@ -1,10 +1,10 @@
-Package: com.splitplay.carplay
-Name: SplitPlay2
-Version: 2.1.4
+Package: com.sideplay2.hud.aimaps
+Name: SidePlay2 HUD - AI Maps & Lifetime Pro
+Version: 1.0.0
 Architecture: iphoneos-arm64
-Description: Hiển thị 2 ứng dụng song song trên màn hình CarPlay (kiến trúc carplay-cast)
-Maintainer: SplitPlay
-Author: SplitPlay
+Description: Tích hợp AI Maps (aimaps.vn) vào bong bóng tốc độ SidePlay2 & mở khoá vĩnh viễn SidePro
+Maintainer: SidePlay Mod
+Author: SidePlay Mod
 Section: Tweaks
-Depends: mobilesubstrate (>= 0.9.5000) | ellekit, firmware (>= 14.0), preferenceloader
-Conflicts: com.cortex.carplayenable, com.pavunato.carsurf, com.bmt.dash
+Depends: mobilesubstrate (>= 0.9.5000) | ellekit, firmware (>= 14.0)
+

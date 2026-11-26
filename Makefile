@@ -5,40 +5,17 @@ THEOS_PACKAGE_SCHEME ?= rootless
 
 include $(THEOS)/makefiles/common.mk
 
-TWEAK_NAME = SplitPlay2
+TWEAK_NAME = SidePlay2HUDAIMaps
 
-SplitPlay2_FILES = \
-	src/hooks/Tweak.x \
-	src/core/SP2Car.mm \
-	src/ui/SP2Workspace.mm \
-	src/ui/SP2Pane.mm \
-	src/ui/SP2Dividers.mm \
-	src/ui/SP2Picker.mm \
-	src/hud/SP2Bubble.mm
-
-SplitPlay2_CFLAGS = -fobjc-arc -Wno-unused-variable -Wno-unused-property-ivar
-SplitPlay2_CCFLAGS = -std=c++17 -fobjc-arc
-SplitPlay2_FRAMEWORKS = UIKit CoreGraphics QuartzCore CoreLocation
-
-# Preferences Bundle
-BUNDLE_NAME = SplitPlay2Prefs
-SplitPlay2Prefs_FILES = prefs/SplitPlayPrefsListController.mm
-SplitPlay2Prefs_INSTALL_PATH = /Library/PreferenceBundles
-SplitPlay2Prefs_FRAMEWORKS = UIKit
-SplitPlay2Prefs_PRIVATE_FRAMEWORKS = Preferences
-SplitPlay2Prefs_CFLAGS = -fobjc-arc
+SidePlay2HUDAIMaps_FILES = src/hooks/SidePlay2HUDAIMaps.x
+SidePlay2HUDAIMaps_CFLAGS = -fobjc-arc -Wno-unused-variable
+SidePlay2HUDAIMaps_FRAMEWORKS = UIKit CoreLocation AVFoundation
 
 include $(THEOS_MAKE_PATH)/tweak.mk
-include $(THEOS_MAKE_PATH)/bundle.mk
-
-internal-stage::
-	$(ECHO_NOTHING)mkdir -p $(THEOS_STAGING_DIR)/Library/PreferenceLoader/Preferences$(ECHO_END)
-	$(ECHO_NOTHING)cp prefs/entry.plist $(THEOS_STAGING_DIR)/Library/PreferenceLoader/Preferences/SplitPlay2.plist$(ECHO_END)
-	$(ECHO_NOTHING)mkdir -p $(THEOS_STAGING_DIR)/Library/PreferenceBundles/SplitPlay2Prefs.bundle$(ECHO_END)
-	$(ECHO_NOTHING)cp prefs/*.plist $(THEOS_STAGING_DIR)/Library/PreferenceBundles/SplitPlay2Prefs.bundle/$(ECHO_END)
 
 after-install::
 	install.exec "killall -9 SpringBoard"
+
 
 
 
