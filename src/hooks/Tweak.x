@@ -51,10 +51,7 @@
 // ─────────────────────────────────────────────
 %group CARPLAY
 
-%hook CARApplication
-
-// Force apps to show up on the CarPlay dashboard
-void addCarPlayDeclarations(id appLibrary) {
+static void addCarPlayDeclarations(id appLibrary) {
     for (id appInfo in objcInvoke(appLibrary, @"allInstalledApplications")) {
         if (getIvar(appInfo, @"_carPlayDeclaration") == nil) {
             NSString *bid = objcInvoke(appInfo, @"bundleIdentifier");
@@ -63,11 +60,27 @@ void addCarPlayDeclarations(id appLibrary) {
             }
 
             id declaration = [[objc_getClass("CRCarPlayAppDeclaration") alloc] init];
+            objcInvoke_1(declaration, @"setSupportsTemplates:", 0);
+            objcInvoke_1(declaration, @"setSupportsMaps:", 1);
             objcInvoke_1(declaration, @"setBundleIdentifier:", bid);
-            objcInvoke_1(declaration, @"setSupportsCarPlay:", @YES);
+            objcInvoke_1(declaration, @"setBundlePath:", objcInvoke(appInfo, @"bundleURL"));
             setIvar(appInfo, @"_carPlayDeclaration", declaration);
         }
     }
+}
+
+%hook CARApplication
+
++ (id)_newApplicationLibrary {
+    id allAppsConfig = [[objc_getClass("FBSApplicationLibraryConfiguration") alloc] init];
+    objcInvoke_1(allAppsConfig, @"setApplicationInfoClass:", objc_getClass("CARApplicationInfo"));
+    objcInvoke_1(allAppsConfig, @"setApplicationPlaceholderClass:", objc_getClass("FBSApplicationPlaceholder"));
+    objcInvoke_1(allAppsConfig, @"setAllowConcurrentLoading:", 1);
+
+    id allAppsLibrary = objcInvoke_1([objc_getClass("FBSApplicationLibrary") alloc],
+                                     @"initWithConfiguration:", allAppsConfig);
+    addCarPlayDeclarations(allAppsLibrary);
+    return allAppsLibrary;
 }
 
 %end
