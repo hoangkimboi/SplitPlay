@@ -1,48 +1,17 @@
-[1;31m> [1;3;39mMaking all for tweak SplitPlay2…[m
-[0;31m==> [1;39mPreprocessing src/hooks/Tweak.x…[m
-[0;31m==> [1;39mPreprocessing src/hooks/Tweak.x…[m
-[0;32m==> [1;39mCompiling src/ui/SP2Workspace.mm (arm64e)…[m
-[0;32m==> [1;39mCompiling src/core/SP2Car.mm (arm64)…[m
-[0;32m==> [1;39mCompiling src/core/SP2Car.mm (arm64e)…[m
-[0;32m==> [1;39mCompiling src/ui/SP2Workspace.mm (arm64)…[m
-[0;32m==> [1;39mCompiling src/ui/SP2Dividers.mm (arm64)…[m
-[0;32m==> [1;39mCompiling src/ui/SP2Picker.mm (arm64)…[m
-[0;32m==> [1;39mCompiling src/ui/SP2Pane.mm (arm64)…[m
-[0;32m==> [1;39mCompiling src/ui/SP2Pane.mm (arm64e)…[m
-[0;32m==> [1;39mCompiling src/hud/SP2Bubble.mm (arm64)…[m
-[0;32m==> [1;39mCompiling src/ui/SP2Dividers.mm (arm64e)…[m
-[0;32m==> [1;39mCompiling src/ui/SP2Picker.mm (arm64e)…[m
-[0;32m==> [1;39mCompiling src/hud/SP2Bubble.mm (arm64e)…[m
-[0;32m==> [1;39mCompiling src/hooks/Tweak.x (arm64)…[m
-[0;32m==> [1;39mCompiling src/hooks/Tweak.x (arm64e)…[m
-[0;33m==> [1;39mLinking tweak SplitPlay2 (arm64)…[m
-[0;34m==> [1;39mGenerating debug symbols for SplitPlay2…[m
-[0;34m==> [1;39mStripping SplitPlay2 (arm64)…[m
-[0;33m==> [1;39mLinking tweak SplitPlay2 (arm64e)…[m
-ld: warning: object file /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64e/src/hooks/Tweak.x.1869deaf.o was built with an incompatible arm64e ABI compiler
-ld: warning: object file /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64e/src/core/SP2Car.mm.1869deaf.o was built with an incompatible arm64e ABI compiler
-ld: warning: object file /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64e/src/ui/SP2Workspace.mm.1869deaf.o was built with an incompatible arm64e ABI compiler
-ld: warning: object file /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64e/src/ui/SP2Pane.mm.1869deaf.o was built with an incompatible arm64e ABI compiler
-ld: warning: object file /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64e/src/ui/SP2Dividers.mm.1869deaf.o was built with an incompatible arm64e ABI compiler
-ld: warning: object file /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64e/src/ui/SP2Picker.mm.1869deaf.o was built with an incompatible arm64e ABI compiler
-ld: warning: object file /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64e/src/hud/SP2Bubble.mm.1869deaf.o was built with an incompatible arm64e ABI compiler
-[0;34m==> [1;39mGenerating debug symbols for SplitPlay2…[m
-[0;34m==> [1;39mStripping SplitPlay2 (arm64e)…[m
-[0;34m==> [1;39mMerging tweak SplitPlay2…[m
-[0;34m==> [1;39mSigning SplitPlay2…[m
-[1;31m> [1;3;39mMaking all for bundle SplitPlay2Prefs…[m
-[0;32m==> [1;39mCompiling prefs/SplitPlayPrefsListController.mm (arm64)…[m
-[0;32m==> [1;39mCompiling prefs/SplitPlayPrefsListController.mm (arm64e)…[m
-[0;33m==> [1;39mLinking bundle SplitPlay2Prefs (arm64e)…[m
-ld: warning: object file /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64e/prefs/SplitPlayPrefsListController.mm.4140ddf5.o was built with an incompatible arm64e ABI compiler
-[0;34m==> [1;39mGenerating debug symbols for SplitPlay2Prefs…[m
-[0;34m==> [1;39mStripping SplitPlay2Prefs (arm64e)…[m
-[0;33m==> [1;39mLinking bundle SplitPlay2Prefs (arm64)…[m
-[0;34m==> [1;39mGenerating debug symbols for SplitPlay2Prefs…[m
-[0;34m==> [1;39mStripping SplitPlay2Prefs (arm64)…[m
-[0;34m==> [1;39mMerging bundle SplitPlay2Prefs…[m
-[0;34m==> [1;39mSigning SplitPlay2Prefs…[m
-[1;31m> [1;3;39mMaking stage for tweak SplitPlay2…[m
-[0;31m==> [1;31mError:[m You are missing a filter property list. Make sure it’s named "SplitPlay2.plist" or "Filter.plist". Refer to http://iphonedevwiki.net/index.php/Cydia_Substrate#MobileLoader.
-make[1]: *** [/home/runner/theos/makefiles/instance/tweak.mk:44: internal-tweak-stage_] Error 1
-make: *** [/home/runner/theos/makefiles/master/rules.mk:146: SplitPlay2.stage.tweak.variables] Error 2
+[1;31m> [1;3;39mMaking all for tweak SidePlay2HUDAIMaps…[m
+[0;31m==> [1;39mPreprocessing src/hooks/SidePlay2HUDAIMaps.x…[m
+[0;31m==> [1;39mPreprocessing src/hooks/SidePlay2HUDAIMaps.x…[m
+[0;32m==> [1;39mCompiling src/hooks/SidePlay2HUDAIMaps.x (arm64)…[m
+[0;32m==> [1;39mCompiling src/hooks/SidePlay2HUDAIMaps.x (arm64e)…[m
+[0;33m==> [1;39mLinking tweak SidePlay2HUDAIMaps (arm64)…[m
+[0;34m==> [1;39mGenerating debug symbols for SidePlay2HUDAIMaps…[m
+[0;34m==> [1;39mStripping SidePlay2HUDAIMaps (arm64)…[m
+[0;33m==> [1;39mLinking tweak SidePlay2HUDAIMaps (arm64e)…[m
+ld: warning: object file /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64e/src/hooks/SidePlay2HUDAIMaps.x.66371bd9.o was built with an incompatible arm64e ABI compiler
+[0;34m==> [1;39mGenerating debug symbols for SidePlay2HUDAIMaps…[m
+[0;34m==> [1;39mStripping SidePlay2HUDAIMaps (arm64e)…[m
+[0;34m==> [1;39mMerging tweak SidePlay2HUDAIMaps…[m
+[0;34m==> [1;39mSigning SidePlay2HUDAIMaps…[m
+[1;31m> [1;3;39mMaking stage for tweak SidePlay2HUDAIMaps…[m
+[0;36m==> [1;36mNotice:[m Neither plutil, ply, or libplist-utils are installed, so XML plist files were not optimized.
+dm.pl: building package `com.sideplay2.hud.aimaps:iphoneos-arm64' in `./packages/com.sideplay2.hud.aimaps_1.0.0_iphoneos-arm64.deb'
