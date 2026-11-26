@@ -7,9 +7,8 @@
         <key>Bundles</key>
         <array>
             <string>vn.aimap.ios</string>
-            <string>com.sideplay2.app</string>
-            <string>com.apple.springboard</string>
         </array>
     </dict>
 </dict>
 </plist>
+
