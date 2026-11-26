@@ -2,9 +2,14 @@
 #import "../common.h"
 #import "../core/SP2Car.h"
 
+@interface NSDistributedNotificationCenter : NSNotificationCenter
++ (instancetype)defaultCenter;
+@end
+
 // ─────────────────────────────────────────────
 // MARK: - SpringBoard Hooks
 // ─────────────────────────────────────────────
+
 %group SPRINGBOARD
 
 %hook SBSuspendedUnderLockManager
