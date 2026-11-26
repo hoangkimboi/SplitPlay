@@ -51,6 +51,14 @@ jobs:
           fi
           ls -la packages/ || true
 
+      - name: Post Build Log to Summary
+        if: always()
+        run: |
+          echo "## Build Log (${{ matrix.scheme }})" >> $GITHUB_STEP_SUMMARY
+          echo '```text' >> $GITHUB_STEP_SUMMARY
+          tail -n 120 build.log >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
       - name: Upload Build Log
         if: always()
         uses: actions/upload-artifact@v4
@@ -64,6 +72,7 @@ jobs:
         with:
           name: SplitPlay2-${{ matrix.scheme }}-deb
           path: packages/*.deb
+
 
 
 
