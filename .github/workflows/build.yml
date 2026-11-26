@@ -44,16 +44,25 @@ jobs:
           export PATH=$THEOS/bin:$PATH
           make clean
           if [ "${{ matrix.scheme }}" = "rootless" ]; then
-            make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless
+            make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=rootless 2>&1 | tee build.log
           else
-            make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME=
+            make package FINALPACKAGE=1 THEOS_PACKAGE_SCHEME= 2>&1 | tee build.log
           fi
 
+      - name: Upload Build Log on Failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log-${{ matrix.scheme }}
+          path: build.log
+
       - name: Upload .deb Artifact
+        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: SplitPlay2-${{ matrix.scheme }}-deb
           path: packages/*.deb
+
 
 
 
