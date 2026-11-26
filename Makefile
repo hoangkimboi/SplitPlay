@@ -31,8 +31,15 @@ SplitPlay2Prefs_CFLAGS = -fobjc-arc
 include $(THEOS_MAKE_PATH)/tweak.mk
 include $(THEOS_MAKE_PATH)/bundle.mk
 
+internal-stage::
+	$(ECHO_NOTHING)mkdir -p $(THEOS_STAGING_DIR)/Library/PreferenceLoader/Preferences$(ECHO_END)
+	$(ECHO_NOTHING)cp prefs/entry.plist $(THEOS_STAGING_DIR)/Library/PreferenceLoader/Preferences/SplitPlay2.plist$(ECHO_END)
+	$(ECHO_NOTHING)mkdir -p $(THEOS_STAGING_DIR)/Library/PreferenceBundles/SplitPlay2Prefs.bundle$(ECHO_END)
+	$(ECHO_NOTHING)cp prefs/*.plist $(THEOS_STAGING_DIR)/Library/PreferenceBundles/SplitPlay2Prefs.bundle/$(ECHO_END)
+
 after-install::
 	install.exec "killall -9 SpringBoard"
+
 
 
 
