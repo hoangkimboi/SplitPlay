@@ -19,7 +19,6 @@ SplitPlay2_FILES = \
 SplitPlay2_CFLAGS = -fobjc-arc -Wno-unused-variable -Wno-unused-property-ivar
 SplitPlay2_CCFLAGS = -std=c++17 -fobjc-arc
 SplitPlay2_FRAMEWORKS = UIKit CoreGraphics QuartzCore CoreLocation
-SplitPlay2_PRIVATE_FRAMEWORKS = SpringBoard SpringBoardServices FrontBoardServices BackBoardServices
 
 # Preferences Bundle
 BUNDLE_NAME = SplitPlay2Prefs
@@ -34,5 +33,6 @@ include $(THEOS_MAKE_PATH)/bundle.mk
 
 after-install::
 	install.exec "killall -9 SpringBoard"
+
 
 
