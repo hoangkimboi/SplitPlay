@@ -1,34 +1,48 @@
 [1;31m> [1;3;39mMaking all for tweak SplitPlay2…[m
 [0;31m==> [1;39mPreprocessing src/hooks/Tweak.x…[m
 [0;31m==> [1;39mPreprocessing src/hooks/Tweak.x…[m
-[0;32m==> [1;39mCompiling src/ui/SP2Workspace.mm (arm64)…[m
-[0;32m==> [1;39mCompiling src/ui/SP2Dividers.mm (arm64)…[m
-[0;32m==> [1;39mCompiling src/ui/SP2Pane.mm (arm64)…[m
+[0;32m==> [1;39mCompiling src/ui/SP2Workspace.mm (arm64e)…[m
 [0;32m==> [1;39mCompiling src/core/SP2Car.mm (arm64)…[m
 [0;32m==> [1;39mCompiling src/core/SP2Car.mm (arm64e)…[m
+[0;32m==> [1;39mCompiling src/ui/SP2Workspace.mm (arm64)…[m
+[0;32m==> [1;39mCompiling src/ui/SP2Dividers.mm (arm64)…[m
 [0;32m==> [1;39mCompiling src/ui/SP2Picker.mm (arm64)…[m
-[0;32m==> [1;39mCompiling src/hud/SP2Bubble.mm (arm64)…[m
-[0;32m==> [1;39mCompiling src/ui/SP2Workspace.mm (arm64e)…[m
-[0;32m==> [1;39mCompiling src/ui/SP2Dividers.mm (arm64e)…[m
+[0;32m==> [1;39mCompiling src/ui/SP2Pane.mm (arm64)…[m
 [0;32m==> [1;39mCompiling src/ui/SP2Pane.mm (arm64e)…[m
+[0;32m==> [1;39mCompiling src/hud/SP2Bubble.mm (arm64)…[m
+[0;32m==> [1;39mCompiling src/ui/SP2Dividers.mm (arm64e)…[m
 [0;32m==> [1;39mCompiling src/ui/SP2Picker.mm (arm64e)…[m
 [0;32m==> [1;39mCompiling src/hud/SP2Bubble.mm (arm64e)…[m
 [0;32m==> [1;39mCompiling src/hooks/Tweak.x (arm64)…[m
-[1msrc/hooks/Tweak.x:33:7: [0m[0;1;31merror: [0m[1muse of undeclared identifier 'NSDistributedNotificationCenter'[0m
-    [[NSDistributedNotificationCenter defaultCenter] addObserver:self
-[0;1;32m      ^
-[0m1 error generated.
-make[3]: *** [/home/runner/theos/makefiles/instance/rules.mk:404: /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64/src/hooks/Tweak.x.34aa079e.o] Error 1
-rm /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64/src/hooks/Tweak.x.m
-make[2]: *** [/home/runner/theos/makefiles/instance/library.mk:52: /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64/SplitPlay2.dylib] Error 2
-make[2]: *** Waiting for unfinished jobs....
 [0;32m==> [1;39mCompiling src/hooks/Tweak.x (arm64e)…[m
-[1msrc/hooks/Tweak.x:33:7: [0m[0;1;31merror: [0m[1muse of undeclared identifier 'NSDistributedNotificationCenter'[0m
-    [[NSDistributedNotificationCenter defaultCenter] addObserver:self
-[0;1;32m      ^
-[0m1 error generated.
-make[3]: *** [/home/runner/theos/makefiles/instance/rules.mk:404: /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64e/src/hooks/Tweak.x.1869deaf.o] Error 1
-rm /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64e/src/hooks/Tweak.x.m
-make[2]: *** [/home/runner/theos/makefiles/instance/library.mk:52: /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64e/SplitPlay2.dylib] Error 2
-make[1]: *** [/home/runner/theos/makefiles/instance/library.mk:37: internal-library-all_] Error 2
-make: *** [/home/runner/theos/makefiles/master/rules.mk:146: SplitPlay2.all.tweak.variables] Error 2
+[0;33m==> [1;39mLinking tweak SplitPlay2 (arm64)…[m
+[0;34m==> [1;39mGenerating debug symbols for SplitPlay2…[m
+[0;34m==> [1;39mStripping SplitPlay2 (arm64)…[m
+[0;33m==> [1;39mLinking tweak SplitPlay2 (arm64e)…[m
+ld: warning: object file /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64e/src/hooks/Tweak.x.1869deaf.o was built with an incompatible arm64e ABI compiler
+ld: warning: object file /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64e/src/core/SP2Car.mm.1869deaf.o was built with an incompatible arm64e ABI compiler
+ld: warning: object file /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64e/src/ui/SP2Workspace.mm.1869deaf.o was built with an incompatible arm64e ABI compiler
+ld: warning: object file /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64e/src/ui/SP2Pane.mm.1869deaf.o was built with an incompatible arm64e ABI compiler
+ld: warning: object file /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64e/src/ui/SP2Dividers.mm.1869deaf.o was built with an incompatible arm64e ABI compiler
+ld: warning: object file /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64e/src/ui/SP2Picker.mm.1869deaf.o was built with an incompatible arm64e ABI compiler
+ld: warning: object file /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64e/src/hud/SP2Bubble.mm.1869deaf.o was built with an incompatible arm64e ABI compiler
+[0;34m==> [1;39mGenerating debug symbols for SplitPlay2…[m
+[0;34m==> [1;39mStripping SplitPlay2 (arm64e)…[m
+[0;34m==> [1;39mMerging tweak SplitPlay2…[m
+[0;34m==> [1;39mSigning SplitPlay2…[m
+[1;31m> [1;3;39mMaking all for bundle SplitPlay2Prefs…[m
+[0;32m==> [1;39mCompiling prefs/SplitPlayPrefsListController.mm (arm64)…[m
+[0;32m==> [1;39mCompiling prefs/SplitPlayPrefsListController.mm (arm64e)…[m
+[0;33m==> [1;39mLinking bundle SplitPlay2Prefs (arm64e)…[m
+ld: warning: object file /home/runner/work/SplitPlay/SplitPlay/.theos/obj/arm64e/prefs/SplitPlayPrefsListController.mm.4140ddf5.o was built with an incompatible arm64e ABI compiler
+[0;34m==> [1;39mGenerating debug symbols for SplitPlay2Prefs…[m
+[0;34m==> [1;39mStripping SplitPlay2Prefs (arm64e)…[m
+[0;33m==> [1;39mLinking bundle SplitPlay2Prefs (arm64)…[m
+[0;34m==> [1;39mGenerating debug symbols for SplitPlay2Prefs…[m
+[0;34m==> [1;39mStripping SplitPlay2Prefs (arm64)…[m
+[0;34m==> [1;39mMerging bundle SplitPlay2Prefs…[m
+[0;34m==> [1;39mSigning SplitPlay2Prefs…[m
+[1;31m> [1;3;39mMaking stage for tweak SplitPlay2…[m
+[0;31m==> [1;31mError:[m You are missing a filter property list. Make sure it’s named "SplitPlay2.plist" or "Filter.plist". Refer to http://iphonedevwiki.net/index.php/Cydia_Substrate#MobileLoader.
+make[1]: *** [/home/runner/theos/makefiles/instance/tweak.mk:44: internal-tweak-stage_] Error 1
+make: *** [/home/runner/theos/makefiles/master/rules.mk:146: SplitPlay2.stage.tweak.variables] Error 2
